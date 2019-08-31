@@ -1,0 +1,7 @@
+int pedirAlgo(char*mensaje)
+{
+    int numero;
+    printf(mensaje);
+    scanf("%d",&numero);
+    return numero;
+}//Pide un entero por puntero con un mensaje incluido
