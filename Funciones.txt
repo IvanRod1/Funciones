@@ -5,3 +5,82 @@ int pedirAlgo(char*mensaje)
     scanf("%d",&numero);
     return numero;
 }//Pide un entero por puntero con un mensaje incluido
+
+void ordenarVector(int vector[],int tamano)
+{
+    int i;
+    int j;
+    int aux;
+    for(i=0;i<tamano-1;i++) // primera flecha
+    {
+        for(j=i+1;j<tamano;j++)//segunda flecha
+        {
+            if(vector[i]>vector[j])//criterio de mandamiento
+            {
+                aux = vector[i];
+                vector[i]=vector[j];
+                vector[j]=aux;
+
+            }
+        }
+    }
+}//ordenar vectores por burbujeo
+
+
+int calcularMaximo(int vector[],int tamano)
+{
+    int i;
+    int flag = 0;
+    int maxNum;
+    for(i=0;i<tamano;i++)
+        {
+        if(flag == 0 || vector[i] > maxNum)
+            {
+                maxNum = vector[i];
+            }
+            flag = 1;
+        }
+    return maxNum;
+}//calcular maximo en un vector
+
+void mostrarMaximo(int vector[],int tam)
+{
+
+        int i;
+        int maxNum = calcularMaximo(vector,tam);
+        printf("\nMaximo %d",maxNum);
+        for (i=0;i<tam;i++)
+        {
+            if(vector[i]==maxNum)
+            {
+                printf("%d-",i);
+            }
+        }
+}//mostrar maximo en un vector;
+
+int calcularMaximo(int vector[],int tamano)
+{
+    int i;
+    int flag = 0;
+    int maxNum;
+    for(i=0;i<tamano;i++)
+        {
+        if(flag == 0 || vector[i] > maxNum)
+            {
+                maxNum = vector[i];
+            }
+            flag = 1;
+        }
+    return maxNum;
+}//calcular maximo de un vector
+
+void cargarVector(int vector[],int tamano) //el vector se puede pasar por puntero (int* vector)
+{
+    int i;
+    for (i=0;i<tamano;i++)
+        {
+        printf("Ingrese un numero:");
+        scanf("%d",&vector[i]);
+        }
+}//cargar vector en forma secuencial
+
