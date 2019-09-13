@@ -93,5 +93,18 @@ void inicializarArrayInt(int array[],int cantidadElementos,int valor)
     }
     
 
+}// inicializa todos los lugares del array con un valor que asigne el usuario
+
+int buscarOcurrencia(int array[],int cantidadElementos,int valor)
+{
+    int i;
+    for(i=0:i<cantidadElementos;i++)
+    {
+        if(array[i] == valor)
+        {
+            return i;
+        }
+    }
+        return -1;
 }
 
